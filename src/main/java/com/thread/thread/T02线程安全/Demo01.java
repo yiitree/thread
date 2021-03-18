@@ -1,19 +1,15 @@
-package com.thread.thread.线程安全;
+package com.thread.thread.T02线程安全;
 
 /**
  * 多线程安全问题
- *
- * @Author: 曾睿
- * @Date: 2021/3/9 14:40
  */
-public class MyThread05 {
+public class Demo01 {
 
     /** 共享数据cnt */
     static int cnt = 0;
 
     /**
-     * 会引起安全问题分析 --- ++不是原子操作，
-     * @param args
+     * 会引起安全问题分析 ：++不是原子操作，
      */
     public static void main(String[] args) {
         Runnable r = () -> {

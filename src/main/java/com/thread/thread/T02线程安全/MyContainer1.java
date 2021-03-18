@@ -1,4 +1,4 @@
-package com.thread.thread.线程安全;
+package com.thread.thread.T02线程安全;
 
 import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
