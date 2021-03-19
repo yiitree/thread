@@ -2,8 +2,13 @@ package com.thread.thread.T02线程安全;
 
 /**
  * 多线程安全问题
+ * 解析：
+ * cnt++分为两步：
+ * 第一步：从内存中取cnt
+ * 第二步：到栈帧空间
+ *
  */
-public class Demo01 {
+public class Demo2 {
 
     /** 共享数据cnt */
     static int cnt = 0;
@@ -21,7 +26,7 @@ public class Demo01 {
                     n--;
                 }
             };
-        //多线程环境
+        // 多线程环境
         Thread t1 = new Thread(r);
         Thread t2 = new Thread(r);
         t1.start();
@@ -32,7 +37,6 @@ public class Demo01 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        //输出的结果会小于50000
         System.out.println(cnt);
     }
 
